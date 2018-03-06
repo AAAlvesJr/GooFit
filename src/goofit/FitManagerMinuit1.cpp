@@ -107,4 +107,6 @@ void FitManagerMinuit1::getMinuitStatus(
     std::cout << "mnstat(fmin = " << fmin << ", fedm = " << fedm << ", errdef = " << errdef << ", npari = " << npari
               << ", nparx = " << nparx << ", istat = " << istat << ")" << std::endl;
 }
+
+
 } // namespace GooFit

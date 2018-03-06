@@ -5,6 +5,7 @@
 #include <Minuit2/FunctionMinimum.h>
 #include <Minuit2/MnMigrad.h>
 #include <Minuit2/MnPrint.h>
+#include <Minuit2/MnScan.h>
 #include <Minuit2/MnUserParameterState.h>
 #include <Minuit2/MnUserParameters.h>
 
@@ -15,6 +16,7 @@ namespace GooFit {
 FitManagerMinuit2::FitManagerMinuit2(PdfBase *dat)
     : upar_(*dat)
     , fcn_(upar_) {}
+
 
 Minuit2::FunctionMinimum FitManagerMinuit2::fit() {
     auto val = Minuit2::MnPrint::Level();
@@ -65,8 +67,12 @@ Minuit2::FunctionMinimum FitManagerMinuit2::fit() {
     // Set the parameters in GooFit to the new values
     upar_.SetGooFitParams(min.UserState());
 
+
+
     Minuit2::MnPrint::SetLevel(val);
     return min;
 }
+
+
 
 } // namespace GooFit

@@ -1,6 +1,7 @@
 #pragma once
 
 #include <Minuit2/FunctionMinimum.h>
+#include <Minuit2/MnScan.h>
 
 #include <memory>
 
@@ -19,6 +20,14 @@ class FitManagerMinuit2 {
 
     /// This runs the fit
     ROOT::Minuit2::FunctionMinimum fit();
+
+    /*
+     * Scans the values of FCN as a function of one parameter.
+     * and plots the resulting values as a curve using MNPLOT.
+     * It may be called to scan one parameter or all parameters.
+     * retains the best function and parameter values found.
+     */
+
 
     /// Set the maximum number of calls. 0 for Minuit2 default.
     void setMaxCalls(unsigned int max_calls = 0) { maxfcn_ = max_calls; }

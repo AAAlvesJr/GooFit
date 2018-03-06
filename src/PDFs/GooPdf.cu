@@ -295,7 +295,8 @@ __host__ double GooPdf::calculateNLL() const {
 
     fptype ret = sumOfNll(numVars);
 
-    if(0 == ret)
+    //
+	if(0 == ret)
         GooFit::abort(__FILE__, __LINE__, getName() + " zero NLL", this);
 
     // if (cpuDebug & 1) std::cout << "Full NLL " << host_callnumber << " : " << 2*ret << std::endl;
