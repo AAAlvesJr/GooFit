@@ -9,8 +9,12 @@ compile_commands.json
 include/goofit/detail/ThrustOverrideConfig.h
 include/goofit/Version.h
 
+*extern/fmt
+*cmake
+
 thrust/*
 **/testing/
+*Build*/*
 *build*/*
 wrkdir/
 *.o
