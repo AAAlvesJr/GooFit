@@ -149,7 +149,7 @@ __device__ fpcomplex plainBW(fptype m12, fptype m13, fptype m23, unsigned int *i
 //                        motherMass);
 
     fdFactor =  dampingFactorSquare(nominalDaughterMoms2, spin, 5.);
-    fdFactor /= dampingFactorSquare(measureDaughterMoms2, spin, 5.); 
+    fdFactor /= dampingFactorSquare(measureDaughterMoms2, spin, 5.);
   }  
  
   // RBW evaluation
@@ -426,11 +426,9 @@ __device__ fpcomplex cubicspline(fptype m12, fptype m13, fptype m23, unsigned in
     const unsigned int pwa_coefs_idx = idx;
     idx += 2 * nKnobs;
     const fptype *mKKlimits = &(functorConstants[indices[idx]]);
-<<<<<<< HEAD
+
     fptype mAB = m12, mAC = m13 ;//, mBC = m23;
-=======
-    fptype mAB = m12, mAC = m13 , mBC = m23;
->>>>>>> a82bf77853dc0744b54bdd11e08b4eaf5f5543c3
+
     switch(cyclic_index) {
     case PAIR_13:
         mAB = m13;
