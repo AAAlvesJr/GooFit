@@ -33,6 +33,11 @@ class DalitzPlotPdf : public GooPdf {
     // Sum up a cached wave
     __host__ fpcomplex sumCachedWave(size_t i) const;
 
+    // Get the decay info struct
+    __host__ DecayInfo3& getDecayInfo() {
+        return decayInfo;
+    }
+
     friend DalitzPlotter;
 
   protected:

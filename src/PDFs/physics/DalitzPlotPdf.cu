@@ -325,6 +325,8 @@ __host__ fpcomplex DalitzPlotPdf::sumCachedWave(size_t i) const {
     return ret;
 }
 
+
+
 SpecialResonanceIntegrator::SpecialResonanceIntegrator(int pIdx, unsigned int ri, unsigned int rj)
     : resonance_i(ri)
     , resonance_j(rj)
