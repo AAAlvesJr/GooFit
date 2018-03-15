@@ -308,14 +308,13 @@ if(GOOFIT_DEVICE STREQUAL CUDA)
         elseif(NOT CMAKE_CUDA_COMPILER_VERSION VERSION_LESS 9.0)
             message(WARNING "You have a version of CUDA that is currently not supported by Eigen, build will fail")
         else()
-            message(STATUS "Found CUDA ${CMAKE_CUDA_COMPILER_VERSION} at ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}")
+            message(STATUS "Found language CUDA ${CMAKE_CUDA_COMPILER_VERSION} at ${CMAKE_CUDA_TOOLKIT_INCLUDE_DIRECTORIES}")
         endif()
 
 
         set(CUDA_TOOLKIT_ROOT_DIR "${CMAKE_CUDA_COMPILER}")
         get_filename_component(CUDA_TOOLKIT_ROOT_DIR "${CUDA_TOOLKIT_ROOT_DIR}" DIRECTORY)
         get_filename_component(CUDA_TOOLKIT_ROOT_DIR "${CUDA_TOOLKIT_ROOT_DIR}" DIRECTORY)
-        find_package(CUDA REQUIRED)
         include(CUDA)
 
         set(cuda_lang "$<COMPILE_LANGUAGE:CUDA>")
